@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CryptoNextX | Premium AI-Driven Crypto Analytics & Launchpad</title>
+
+    <style>
+
+        :root {
+
+            --bg-color: #0B0E11;
+
+            --card-bg: #181A20;
+
+            --text-color: #EAECEF;
+
+            --accent-color: #F3BA2F; /* Crypto Gold */
+
+            --text-muted: #848E9C;
+
+            --border-color: #2B2F36;
+
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+
+        header { border-bottom: 1px solid var(--border-color); background-color: rgba(11, 14, 17, 0.9); sticky: top; top: 0; z-index: 100; position: sticky; backdrop-filter: blur(10px); }
+
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+
+        .logo { font-size: 24px; font-weight: bold; color: var(--text-color); text-transform: uppercase; letter-spacing: 1px; }
+
+        .logo span { color: var(--accent-color); }
+
+        nav a { color: var(--text-color); text-decoration: none; margin-left: 25px; font-weight: 500; font-size: 15px; transition: color 0.3s; }
+
+        nav a:hover, nav a.active-adv { color: var(--accent-color); }
+
+        nav a.btn-nav { background-color: var(--accent-color); color: var(--bg-color); padding: 8px 16px; border-radius: 4px; font-weight: bold; }
+
+        
+
+        .hero { max-width: 1200px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+
+        .hero h1 { font-size: 48px; margin-bottom: 20px; letter-spacing: -0.5px; }
+
+        .hero h1 span { color: var(--accent-color); }
+
+        .hero p { font-size: 18px; color: var(--text-muted); max-width: 800px; margin: 0 auto 40px auto; }
+
+        .hero .cta-btn { background-color: var(--accent-color); color: var(--bg-color); padding: 15px 35px; border-radius: 6px; font-size: 18px; font-weight: bold; text-decoration: none; transition: transform 0.2s; display: inline-block; }
+
+        .hero .cta-btn:hover { transform: translateY(-2px); }
+
+        .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; }
+
+        .section-title span { color: var(--accent-color); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; border-top: 1px solid var(--border-color); }
+
+        
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); padding: 30px; border-radius: 8px; transition: border-color 0.3s; }
+
+        .card:hover { border-color: var(--accent-color); }
+
+        .card h3 { font-size: 22px; margin-bottom: 15px; color: var(--text-color); }
+
+        .card p { color: var(--text-muted); font-size: 15px; margin-bottom: 20px; }
+
+        .price-tag { font-size: 24px; font-weight: bold; color: var(--accent-color); margin-bottom: 15px; }
+
+        
+
+        .directory-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: var(--card-bg); border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); }
+
+        .directory-table th, .directory-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid var(--border-color); }
+
+        .directory-table th { background-color: #1E222A; color: var(--text-muted); font-size: 14px; text-transform: uppercase; }
+
+        .badge-premium { background-color: rgba(243, 186, 47, 0.1); color: var(--accent-color); padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+
+        .badge-slot { background-color: rgba(235, 87, 87, 0.1); color: #EB5757; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; animation: pulse 2s infinite; }
+
+        
+
+        footer { border-top: 1px solid var(--border-color); padding: 40px 20px; text-align: center; color: var(--text-muted); font-size: 14px; }
+
+        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- TradingView Widget شريط الأسعار الحي العلوى -->
+
+    <div class="tradingview-widget-container" style="border-bottom: 1px solid var(--border-color);">
+
+        <div class="tradingview-widget-container__widget"></div>
+
+        <script type="text/javascript" src="https://tradingview.com" async>
+
+        {
+
+        "symbols": [
+
+          {"proName": "BINANCE:BTCUSDT", "title": "Bitcoin"},
+
+          {"proName": "BINANCE:ETHUSDT", "title": "Ethereum"},
+
+          {"proName": "BINANCE:SOLUSDT", "title": "Solana"},
+
+          {"proName": "BINANCE:BNBUSDT", "title": "BNB"},
+
+          {"proName": "BINANCE:XRPUSDT", "title": "XRP"}
+
+        ],
+
+        "showSymbolLogo": true,
+
+        "colorTheme": "dark",
+
+        "isTransparent": true,
+
+        "displayMode": "adaptive",
+
+        "locale": "en"
+
+      }
+
+        </script>
+
+    </div>
+
+    <header>
+
+        <div class="nav-container">
+
+            <div class="logo">Crypto<span>NextX</span></div>
+
+            <nav>
+
+                <a href="#analytics">AI Analytics</a>
+
+                <a href="#directory">Launchpad Directory</a>
+
+                <a href="#advertise" class="btn-nav">Advertise With Us</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>EXPLORE <span>AI-DRIVEN</span> CRYPTO ANALYTICS & LAUNCHPAD</h1>
+
+        <p>The ultimate AI-powered intelligence platform for web3 projects. List your token, presale, or crypto ecosystem to reach thousands of global active investors daily.</p>
+
+        <a href="#advertise" class="cta-btn">Get Listed Now</a>
+
+    </section>
+
+    <!-- قسم دليل المشاريع والدفع المدر للمال -->
+
+    <section class="container" id="directory">
+
+        <h2 class="section-title">Verified <span>Launchpad</span> Directory</h2>
+
+        <table class="directory-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Project Name</th>
+
+                    <th>Category</th>
+
+                    <th>AI Score</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td><strong>SolanaAI Protocols</strong></td>
+
+                    <td>DeFi / Layer 2</td>
+
+                    <td style="color: #27AE60; font-weight: bold;">9.4 / 10</td>
+
+                    <td><span class="badge-premium">Featured Partner</span></td>
+
+                    <td><a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">View Review</a></td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Nexus Chain</strong></td>
+
+                    <td>Web3 Infrastructure</td>
+
+                    <td style="color: #27AE60; font-weight: bold;">8.9 / 10</td>
+
+                    <td><span class="badge-premium">Featured Partner</span></td>
+
+                    <td><a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">View Review</a></td>
+
+                </tr>
+
+                <!-- خانة الصيد المالي المستهدفة -->
+
+                <tr style="background-color: rgba(243, 186, 47, 0.02);">
+
+                    <td style="color: var(--accent-color);"><strong>[ Your Project Here ]</strong></td>
+
+                    <td>Crypto / Token / NFT</td>
+
+                    <td>--</td>
+
+                    <td><span class="badge-slot">🔥 Slot Available</span></td>
+
+                    <td><a href="#advertise" style="background: var(--accent-color); color: #000; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 13px;">Apply for $29</a></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- قسم الخدمات البرمجية للذكاء الاصطناعي لإعطاء هيبة للموقع -->
+
+    <section class="container" id="analytics">
+
+        <h2 class="section-title">Our AI <span>Core Analytics</span></h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>Predictive AI Modeling</h3>
+
+                <p>Advanced neural networks analyze liquidity depths, social sentiment shifts, and on-chain whale wallets movements to forecast token stability.</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Smart Contract Auditing</h3>
+
+                <p>Instant automated scanning of solidity codebases to flag immediate vulnerabilities, honeypot structures, and rug-pull mechanics.</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Global Launchpad Exposure</h3>
+
+                <p>We index high-potential early-stage gems, providing clear data visualizations to institutional buyers and high-net-worth retail groups.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- أهم قسم: صيد الشركات والإعلانات والدفع بـ USDT -->
+
+    <section class="container" id="advertise">
+
+        <h2 class="section-title"><span>Advertise</span> With Us</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>Premium Directory Listing</h3>
+
+                <div class="price-tag">$29 <span style="font-size: 14px; color: var(--text-muted);">/ One-time</span></div>
+
+                <p>Get listed permanently in our Launchpad Directory. Includes a basic automated AI trust score badge and active tracking link.</p>
+
+            </div>
+
+            <div class="card" style="border-color: var(--accent-color);">
+
+                <h3>Sponsored Article & Review</h3>
+
+                <div class="price-tag">$50 <span style="font-size: 14px; color: var(--text-muted);">/ Article</span></div>
+
+                <p>Our editorial team writes an engaging, deeply-researched project review posted on our homepage, indexable on search engines.</p>
+
+            </div>
+
+            <div class="card">
