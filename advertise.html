@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertise With Us - Cryptonextx</title>
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #151a26;
+            --accent-color: #00ffcc;
+            --text-color: #ffffff;
+            --text-muted: #8a99ad;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(21, 26, 38, 0.95);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222d3d;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* جداول وباقات الأسعار الإعلانية */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .price-card {
+            background-color: var(--card-bg);
+            border: 1px solid #222d3d;
+            border-radius: 8px;
+            padding: 30px;
+            transition: transform 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .price-card h3 {
+            font-size: 22px;
+            margin-top: 0;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin: 20px 0;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+        }
+
+        /* قسم الدفع والمحفظة الاحترافي */
+        .payment-section {
+            background-color: var(--card-bg);
+            border: 1px solid #222d3d;
+            border-radius: 8px;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .wallet-container {
+            background-color: #0b0e14;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px dashed #3b4e6e;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            max-width: 100%;
+            word-break: break-all;
+        }
+
+        .wallet-address {
+            font-family: monospace;
+            font-size: 16px;
+            color: var(--accent-color);
+        }
+
+        .copy-btn {
+            background-color: var(--accent-color);
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #00cca3;
+        }
+
+        .contact-mail {
+            color: var(--text-color);
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        footer {
+            background-color: #07090d;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 1px solid #151a26;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Cryptonextx</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="blog.html">Articles</a>
+            <a href="advertise.html">Advertise With Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Grow Your Project with <span>Cryptonextx</span></h1>
+        <p class="subtitle">Promote your token, project, or brand to thousands of active crypto investors daily.</p>
+
+        <!-- جداول أسعار المساحات الإعلانية -->
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Top Banner Ad</h3>
+                <div class="price">$49 <span>/ week</span></div>
+                <ul class="features">
+                    <li>Size: 728x90 Header Placement</li>
+                    <li>High Visibility on all pages</li>
+                    <li>Direct Link to your website</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <h3>Directory Listing</h3>
+                <div class="price">$29 <span>/ permanent</span></div>
+                <ul class="features">
+                    <li>Permanent link in directory</li>
+                    <li>"New Project" Gold Badge</li>
+                    <li>Full project description</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <h3>Sponsored Article</h3>
+                <div class="price">$79 <span>/ post</span></div>
+                <ul class="features">
+                    <li>Full dedicated review article</li>
+                    <li>Shared on our main feed</li>
+                    <li>SEO optimized links</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- قسم الدفع والمحفظة مع زر النسخ الذكي -->
+       <div class="payment-section">
+            <h2>How to order?</h2>
+            <p>1. Send the exact price of your chosen package in <strong>USDT (Binance Smart Chain - BEP20)</strong> to the wallet address below:</p>
+            
+            <div class="wallet-container">
+                <!-- استبدل العنوان المكتوب بالأسفل بالرمز الحقيقي لمحفظتك بعد انشائها -->
+                <span class="wallet-address" id="wallet">0xDB889586362592c32Cf106123E62528845879240</span>
+                <button class="copy-btn" onclick="copyWallet()">Copy</button>
+            </div>
+
+            <p style="margin-top: 20px;">2. After sending, email us your transaction ID (TxID) and banner/project details at: <a href="mailto:info@cryptonextx.com" class="contact-mail">info@cryptonextx.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cryptonextx. All Rights Reserved.</p>
+    </footer>
+
+    <!-- كود الجافا سكريبت الذكي لنسخ المحفظة بضغطة زر -->
+    <script>
+        function copyWallet() {
+            var walletText = document.getElementById("wallet").innerText;
+            navigator.clipboard.writeText(walletText).then(function() {
+                alert("Wallet address copied successfully!");
+            }, function() {
+                alert("Failed to copy. Please copy it manually.");
+            });
+        }
+    </script>
+
+<!-- === CRYPTONEXTX AI CHATBOT WIDGET === -->
+<div id="crypto-bot-container">
+    <div id="crypto-bot-button" onclick="toggleCryptoBot()">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span style="font-size: 11px; font-weight: bold; display: block; margin-top: -2px;">AI Assistant</span>
+    </div>
+    <div id="crypto-bot-window">
+        <div id="crypto-bot-header">
+            <div>
+                <strong style="color: #00ffcc;">Cryptonextx AI</strong>
+                <div style="font-size: 11px; color: #8a99ad;">Advanced Crypto Analytics</div>
+            </div>
+            <span style="cursor: pointer; font-size: 20px;" onclick="toggleCryptoBot()">&times;</span>
+        </div>
+        <div id="crypto-bot-messages">
+            <div class="bot-msg">🤖 Welcome to Cryptonextx! I am your AI Market Analyst. Ask me anything about Bitcoin, project analysis, or our directory!</div>
+        </div>
+        <div id="crypto-bot-input-area">
+            <input type="text" id="crypto-bot-input" placeholder="Ask about any project or coin..." onkeypress="handleBotKeyPress(event)">
+            <button onclick="sendCryptoBotMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* تصميم أيقونة البوت العائمة أسفل الشاشة */
+    #crypto-bot-button {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #151a26;
+        color: #00ffcc;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+        border: 2px solid #00ffcc;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: transform 0.3s;
+    }
+    #crypto-bot-button:hover { transform: scale(1.1); }
+    
+    /* نافذة المحادثة */
+    #crypto-bot-window {
+        position: fixed;
+        bottom: 115px;
+        right: 30px;
+        width: 350px;
+        height: 480px;
+        background-color: #151a26;
+        border: 1px solid #222d3d;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        display: none;
+        flex-direction: column;
+        z-index: 9999;
+        font-family: inherit;
+        overflow: hidden;
+    }
+    #crypto-bot-header {
+        background-color: #0b0e14;
+        padding: 15px;
+        border-bottom: 1px solid #222d3d;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #crypto-bot-messages {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 14px;
+    }
+    .bot-msg, .user-msg {
+        padding: 10px 14px;
+        border-radius: 8px;
+        max-width: 80%;
+    }
+    .bot-msg { background-color: #222d3d; color: #fff; align-self: flex-start; }
+    .user-msg { background-color: #00ffcc; color: #000; align-self: flex-end; font-weight: 500; }
+    
+    #crypto-bot-input-area {
+        padding: 12px;
+        background-color: #0b0e14;
+        border-top: 1px solid #222d3d;
+        display: flex;
+        gap: 8px;
+    }
+    #crypto-bot-input {
+        flex: 1;
+        background-color: #151a26;
+        border: 1px solid #222d3d;
+        color: #fff;
+        padding: 10px;
+        border-radius: 6px;
+        outline: none;
+    }
+    #crypto-bot-input:focus { border-color: #00ffcc; }
+    #crypto-bot-input-area button {
+        background-color: #00ffcc;
+        color: #000;
+        border: none;
+        padding: 0 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    // وظائف الجافا سكريبت لتشغيل البوت والرد التلقائي
+    function toggleCryptoBot() {
+        var win = document.getElementById("crypto-bot-window");
+        if(win.style.display === "none" || win.style.display === "") {
+            win.style.display = "flex";
+        } else {
+            win.style.display = "none";
+        }
+    }
+
+    function handleBotKeyPress(e) {
+        if(e.key === 'Enter') { sendCryptoBotMessage(); }
+    }
+
+    function sendCryptoBotMessage() {
+        var input = document.getElementById("crypto-bot-input");
+        var msgText = input.value.trim();
+        if(!msgText) return;
+
+        var msgContainer = document.getElementById("crypto-bot-messages");
+        
+        // إضافة رسالة المستخدم
+        var userDiv = document.createElement("div");
+        userDiv.className = "user-msg";
+        userDiv.innerText = msgText;
+        msgContainer.appendChild(userDiv);
+        
+        input.value = "";
+        msgContainer.scrollTop = msgContainer.scrollHeight;
+
+        // رد الذكاء الاصطناعي التلقائي بعد ثانية واحدة
+        setTimeout(function() {
+            var botDiv = document.createElement("div");
+            botDiv.className = "bot-msg";
+            botDiv.innerText = generateAIResponse(msgText);
+            msgContainer.appendChild(botDiv);
+            msgContainer.scrollTop = msgContainer.scrollHeight;
+        }, 1000);
+    }
+
+    // منطق الردود الذكية للكريبتو
+    function generateAIResponse(input) {
+        var query = input.toLowerCase();
+        if(query.includes("hello") || query.includes("hi")) {
+            return "Hello! How can I assist you with crypto analysis today?";
+        } else if(query.includes("bitcoin") || query.includes("btc")) {
+            return "📊 AI Analysis for BTC: Bitcoin is showing strong support patterns. Our neural network indicators suggest a bullish consolidation momentum. Keep an eye on key resistance levels.";
+        } else if(query.includes("price") || query.includes("market")) {
+            return "📈 Market Update: Most layer-1 tokens are holding major support zones. Volatility is expected, but overall AI sentiment remains positive for long-term holders.";
+        } else if(query.includes("directory") || query.includes("list") || query.includes("add")) {
+            return "🚀 Want to list your project on our AI Directory? It's simple and permanent for just $29! Head over to our 'Advertise With Us' page to secure your spot.";
+        } else {
+            return "🤖 Analysis Complete: That project looks interesting! Our AI model rates its current smart contract health as 'Stable'. For deeper metrics, please subscribe to our Pro tier.";
+        }
+    }
+</script>
+<!-- === END OF CRYPTONEXTX AI CHATBOT === -->
+
+Displaying
+</body>
+</html>

@@ -1,0 +1,442 @@
+
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Token Directory - Cryptonextx</title>
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #151a26;
+            --accent-color: #00ffcc;
+            --text-color: #ffffff;
+            --text-muted: #8a99ad;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(21, 26, 38, 0.95);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222d3d;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        /* تنسيق البطاقات الموحد المشترك لجميع العملات */
+        .directory-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .directory-card {
+            background-color: var(--card-bg);
+            border: 1px solid #222d3d;
+            border-radius: 8px;
+            padding: 25px;
+            transition: border-color 0.3s;
+        }
+
+        .directory-card:hover {
+            border-color: var(--accent-color);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .token-name {
+            margin: 0;
+            font-size: 22px;
+            color: var(--text-color);
+            display: inline-block;
+        }
+
+        .status-badge {
+            color: var(--accent-color);
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+
+        .token-rating {
+            background-color: rgba(0, 255, 204, 0.1);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: right;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.05);
+        }
+
+        .token-description {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* صندوق الدعوة المخصص للبيع والتسويق في الأسفل */
+        .cta-box {
+            border: 2px dotted var(--accent-color);
+            background-color: rgba(0, 255, 204, 0.02);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-box h3 {
+            margin: 0 0 10px 0;
+            color: #ffffff;
+            font-size: 22px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #0b0e14;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .cta-btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: #07090d;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 1px solid #151a26;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Cryptonextx</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="blog.html">Articles</a>
+            <a href="advertise.html">Advertise With Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Verified Project <span>Directory</span></h1>
+        <p class="subtitle">Explore fully audited Web3 projects, advanced AI safety ratings, and verified tokens.</p>
+
+        <div class="directory-grid">
+            
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">SolanaX Layer</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 8.7/10 (Low Risk)</div>
+                </div>
+                <p class="token-description">A scalable Layer-2 solution optimized for high-speed DeFi protocols and next-generation decentralized financial architectures.</p>
+            </div>
+
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">AI-Quant Token</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 9.1/10 (Highly Bullish)</div>
+                </div>
+                <p class="token-description">An automated quantitative trading protocol utilizing decentralized AI models for predictive market micro-structure execution.</p>
+            </div>
+
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">Metaverse Hub</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 8.2/10 (Medium Risk)</div>
+                </div>
+                <p class="token-description">A decentralized virtual spatial reality ecosystem anchoring commercial property transactions directly on-chain.</p>
+            </div>
+
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">PrivacyNode Protocol</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 8.9/10 (Low Risk)</div>
+                </div>
+                <p class="token-description">A zero-knowledge compliance framework designed to shield institutional asset movements across multi-chain ecosystems.</p>
+            </div>
+
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">DePIN Network Alpha</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 8.5/10 (Low Risk)</div>
+                </div>
+                <p class="token-description">A decentralized physical infrastructure layer crowd-sourcing idle hardware node compute clusters globally.</p>
+            </div>
+
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">Solana (SOL)</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 9.4/10 (Low Risk / Highly Bullish)</div>
+                </div>
+                <p class="token-description">A high-performance Layer-1 blockchain optimized for decentralized applications, high-speed DeFi protocols, and scalable consumer crypto products.</p>
+            </div>
+
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">Render Network (RENDER)</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 9.1/10 (Low Risk / Strong Growth)</div>
+                </div>
+                <p class="token-description">A decentralized GPU rendering network powering next-generation artificial intelligence computing, digital art, and spatial metaverse infrastructure.</p>
+            </div>
+
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">Arbitrum (ARB)</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 8.8/10 (Low Risk)</div>
+                </div>
+                <p class="token-description">An optimistic rollup scaling protocol engineered to boost Ethereum transaction speeds while heavily reducing execution overhead fees.</p>
+            </div>
+
+      
+                 <!-- [العملة رقم 11]: مشروع Ecochain Web3 -->
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">Ecochain Web3 (ECO)</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 7.9/10 (Medium Risk / Sustainable)</div>
+                </div>
+                <p class="token-description">A decentralized green computing protocol focused on carbon-neutral blockchain infrastructure and eco-friendly smart contract validation networks.</p>
+            </div>
+
+            <!-- [العملة رقم 12]: مشروع Ondo Finance -->
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">Ondo Finance (ONDO)</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 9.2/10 (Low Risk / RWA Leader)</div>
+                </div>
+                <p class="token-description">An institutional-grade decentralized finance protocol bridging on-chain liquidity with real-world assets, including US Treasury backed tokens.</p>
+            </div>
+
+            <!-- [العملة رقم 13]: مشروع Pepe -->
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">Pepe (PEPE)</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 7.5/10 (High Volatility / Meme Narrative)</div>
+                </div>
+                <p class="token-description">A community-driven culture-centric digital asset operating on decentralized liquidity networks, maintaining a highly active social consensus mechanism.</p>
+            </div>
+
+            <!-- [العملة رقم 14]: مشروع Celestia -->
+            <div class="directory-card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="token-name">Celestia (TIA)</h2>
+                        <span class="status-badge">✓ Verified</span>
+                    </div>
+                    <div class="token-rating">AI Rating: 9.0/10 (Low Risk / Modular Architecture)</div>
+                </div>
+                <p class="token-description">The first modular blockchain network engineered to enable plug-and-play data availability layers for scalable next-generation rollups.</p>
+            </div>
+
+        </div>
+
+        <!-- ================= صندوق الترويج والتسويق ($29 Listing) ================= -->
+        <div class="promo-card" style="background-color: var(--card-bg); border: 2px dotted var(--accent-color); border-radius: 8px; padding: 35px; text-align: center; margin-top: 40px; box-shadow: 0 0 15px rgba(0, 255, 204, 0.02);">
+            <h2 style="margin: 0 0 10px 0; color: #ffffff; font-size: 26px;">Own a Crypto Project or Token? 🚀</h2>
+            <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 15px;">Get your project listed here permanently with full AI verification badge and expose your brand to thousands of daily investors.</p>
+            <p style="font-size: 24px; font-weight: bold; margin-bottom: 25px; color: #ffffff;">List Your Project Today for Only <span style="color: var(--accent-color); text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);">$29</span></p>
+            
+            <a href="advertise.html" class="promo-btn" style="display: inline-block; background-color: var(--accent-color); color: #0b0e14; padding: 12px 35px; border-radius: 6px; font-weight: bold; text-decoration: none; font-size: 16px; transition: opacity 0.2s;">Submit Your Project Now</a>
+        </div>
+
+    </div> <!-- إغلاق حاوية الـ container الرئيسية -->
+
+    <!-- ================= آخر الصفحة الثابت (FOOTER) ================= -->
+    <footer style="background-color: #07090d; text-align: center; padding: 30px; margin-top: 60px; border-top: 1px solid #151a26; color: var(--text-muted); font-size: 14px;">
+        <p>&copy; 2026 Cryptonextx. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ================= البوت العائم المستقل للذكاء الاصطناعي (AI CHATBOT WIDGET) ================= -->
+    <div id="crypto-bot-container" style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; font-family: sans-serif;">
+        <!-- زر فتح البوت -->
+        <div id="crypto-bot-button" onclick="toggleCryptoBot()" style="background-color: var(--card-bg); color: var(--accent-color); width: 60px; height: 60px; border-radius: 50px; display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.5); border: 1px solid #222d3d; transition: transform 0.2s;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <span style="font-size: 9px; font-weight: bold; margin-top: 2px;">AI Bot</span>
+        </div>
+        
+        <!-- نافذة المحادثة (تفتح وتغلق عبر الـ JavaScript) -->
+        <div id="crypto-bot-window" style="display: none; width: 350px; height: 450px; background-color: var(--card-bg); border: 1px solid #222d3d; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.6); position: absolute; bottom: 80px; right: 0; overflow: hidden; flex-direction: column;">
+            <div id="crypto-bot-header" style="background-color: #07090d; padding: 15px; border-bottom: 1px solid #222d3d; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <strong style="color: var(--accent-color); font-size: 14px;">Cryptonextx AI</strong>
+                    <div style="font-size: 11px; color: var(--text-muted);">Advanced Crypto Analytics</div>
+                </div>
+                <span style="cursor: pointer; font-size: 22px; color: var(--text-muted); line-height: 1;" onclick="toggleCryptoBot()">&times;</span>
+            </div>
+            <div id="crypto-bot-messages" style="flex: 1; padding: 15px; overflow-y: auto; font-size: 13px; color: #e0e6ed; display: flex; flex-direction: column; gap: 10px;">
+                <div class="bot-msg" style="background-color: var(--bg-color); padding: 10px; border-radius: 8px; border: 1px solid #222d3d; max-width: 85%;">
+                    🤖 Welcome to Cryptonextx! I am your AI Market Analyst. Ask me anything about Bitcoin, project analysis, or our directory!
+                </div>
+            </div>
+            <div id="crypto-bot-input-area" style="padding: 10px; border-top: 1px solid #222d3d; display: flex; gap: 8px; background-color: #07090d;">
+                <input type="text" id="crypto-bot-input" placeholder="Ask about any project or coin..." onkeypress="handleBotKeyPress(event)" style="flex: 1; background-color: var(--bg-color); border: 1px solid #222d3d; border-radius: 4px; padding: 8px; color: #ffffff; font-size: 13px; outline: none;">
+                <button onclick="sendCryptoBotMessage()" style="background-color: var(--accent-color); color: #0b0e14; border: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 13px;">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- السكربت البرمجي الموحد لتشغيل فتح وإغلاق نافذة البوت -->
+    <script>
+        function toggleCryptoBot() {
+            var botWindow = document.getElementById("crypto-bot-window");
+            if (botWindow.style.display === "none" || botWindow.style.display === "") {
+                botWindow.style.display = "flex";
+            } else {
+                botWindow.style.display = "none";
+            }
+        }
+
+        function handleBotKeyPress(event) {
+            if (event.key === "Enter") {
+                sendCryptoBotMessage();
+            }
+        }
+
+        function sendCryptoBotMessage() {
+            var input = document.getElementById("crypto-bot-input");
+            var msgContainer = document.getElementById("crypto-bot-messages");
+            if (input.value.trim() !== "") {
+                // رسالة المستخدم
+                var userDiv = document.createElement("div");
+                userDiv.style.alignSelf = "flex-end";
+                userDiv.style.backgroundColor = "var(--accent-color)";
+                userDiv.style.color = "#0b0e14";
+                userDiv.style.padding = "10px";
+                userDiv.style.borderRadius = "8px";
+                userDiv.style.maxWidth = "85%";
+                userDiv.innerText = input.value;
+                msgContainer.appendChild(userDiv);
+                
+                var userQuery = input.value.toLowerCase();
+                input.value = "";
+                msgContainer.scrollTop = msgContainer.scrollHeight;
+
+                // رد تلقائي ذكي يحول العميل لصفحة الإعلان لزيادة أرباحك
+                setTimeout(function() {
+                    var botDiv = document.createElement("div");
+                    botDiv.style.alignSelf = "flex-start";
+                    botDiv.style.backgroundColor = "var(--bg-color)";
+                    botDiv.style.border = "1px solid #222d3d";
+                    botDiv.style.color = "#e0e6ed";
+                    botDiv.style.padding = "10px";
+                    botDiv.style.borderRadius = "8px";
+                    botDiv.style.maxWidth = "85%";
+                    
+                    if (userQuery.includes("list") || userQuery.includes("advertise") || userQuery.includes("price")) {
+                        botDiv.innerHTML = "📢 To list your token with a Verified Gold Badge for only $29, please visit our <a href='advertise.html' style='color:var(--accent-color); font-weight:bold;'>Advertise Page</a> to securely transfer via USDT (BEP20).";
+                    } else {
+                        botDiv.innerText = "🤖 Analysis Complete. This protocol shows strong on-chain network distribution. For official audits and safety badges, please refer to the core team to apply via our Advertise section.";
+                    }
+                    
+                    msgContainer.appendChild(botDiv);
+                    msgContainer.scrollTop = msgContainer.scrollHeight;
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>
