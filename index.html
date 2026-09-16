@@ -20,6 +20,10 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* يضمن توسيط كل محتويات الصفحة */
+            width: 100%;
         }
 
         header {
@@ -32,6 +36,8 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #222d3d;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .logo {
@@ -51,20 +57,6 @@
 
         nav a:hover {
             color: var(--accent-color);
-        }
-
-        .ad-banner-top {
-            width: 100%;
-            max-width: 728px;
-            height: 90px;
-            background-color: #1a2233;
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px dashed #3b4e6e;
-            color: var(--text-muted);
-            font-size: 14px;
         }
 
         .hero {
@@ -111,9 +103,97 @@
             border-top: 1px solid #151a26;
             color: var(--text-muted);
             font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* ===================================== */
+        /* كود البانر النيون المحدث للتوسط الكامل */
+        /* ===================================== */
+        .promo-banner-container {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding: 20px 0;
+            width: 100% !important;
+            box-sizing: border-box;
+            clear: both;
+        }
+
+        .ai-safety-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: rgba(10, 25, 20, 0.85); 
+            border: 2px solid #00ffa3; 
+            border-radius: 12px;
+            padding: 15px 30px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 163, 0.2);
+            animation: neonPulse 2s infinite alternate; 
+            max-width: 800px;
+            width: 90%; /* متوافق مع كافة الشاشات */
+            margin: 0 auto !important; /* يجبر البانر على التوسط في المنتصف */
+            box-sizing: border-box;
+        }
+
+        .ai-safety-banner:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(0, 255, 163, 0.6);
+            background: rgba(0, 255, 163, 0.05);
+        }
+
+        .banner-text {
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 0;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .highlight-text {
+            color: #00ffa3;
+            text-shadow: 0 0 5px rgba(0, 255, 163, 0.5);
+        }
+
+        .price-tag {
+            background: #00ffa3;
+            color: #050f0c;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 800;
+            display: inline-block;
+            box-shadow: 0 0 8px rgba(0, 255, 163, 0.4);
+        }
+
+        .lightning-icon {
+            font-size: 18px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes neonPulse {
+            0% { border-color: #00ffa3; box-shadow: 0 0 10px rgba(0, 255, 163, 0.3); }
+            100% { border-color: #00b372; box-shadow: 0 0 20px rgba(0, 255, 163, 0.5), inset 0 0 5px rgba(0, 255, 163, 0.2); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        @media (max-width: 600px) {
+            .ai-safety-banner { padding: 12px 15px; gap: 8px; width: 95%; }
+            .banner-text { font-size: 11px; }
+            .lightning-icon { font-size: 12px; }
         }
    </style>
 </head>
+
 <body>
 
     <header>
@@ -125,21 +205,22 @@
             <a href="advertise.html">Advertise With Us</a>
         </nav>
     </header>
-    <!-- ================= BRANDED PURE CSS ADVERTISING SPACE 728x90 ================= -->
-    <div class="ad-banner-top" style="max-width: 728px; margin: 20px auto; text-align: center; padding: 0 10px;">
-        <a href="advertise.html" style="display: block; text-decoration: none; box-sizing: border-box; width: 100%; max-width: 728px; height: 90px; background: linear-gradient(135deg, #0b0e14 0%, #151a24 100%); border: 2px solid #00ffcc; box-shadow: 0 0 15px rgba(0, 255, 204, 0.4); border-radius: 6px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease;">
-            <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-transform: uppercase; letter-spacing: 1px;">
-                <span style="color: #ffffff; font-weight: bold; font-size: 16px; display: block; margin-bottom: 4px;">⚡ LIST YOUR TOKEN HERE WITH AI SAFETY BADGE ⚡</span>
-                <span style="color: #00ffcc; font-weight: 600; font-size: 13px;">FOR ONLY <span style="background-color: rgba(0, 255, 204, 0.15); padding: 2px 6px; border-radius: 4px; color: #ffffff; border: 1px solid #00ffcc;">$29</span> • CONTACT OUR MARKETING TEAM NOW</span>
-            </div>
+
+    <div class="promo-banner-container">
+    <a href="advertise.html" class="ai-safety-banner">
+        <span class="lightning-icon">⚡</span>
+        <p class="banner-text">
+            LIST YOUR TOKEN HERE WITH <span class="highlight-text">AI SAFETY BADGE</span> FOR ONLY <span class="price-tag">£29</span> • CONTACT OUR MARKETING TEAM NOW
+        </p>
+        <span class="lightning-icon">⚡</span>
+    </a>
+</div>
+
         </a>
     </div>
 
+    </div>
 
-
-
-
-    
 
     <main class="hero">
         <h1>Next-Gen AI <span>Crypto Analysis</span></h1>
@@ -150,7 +231,6 @@
     <footer>
         <p>&copy; 2026 Cryptonextx. All Rights Reserved.</p>
     </footer>
-
 
 <!-- === CRYPTONEXTX AI CHATBOT WIDGET === -->
 <div id="crypto-bot-container">
