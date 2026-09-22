@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Badge Methodology - Cryptonextx</title>
+<style>
+:root {
+  --bg-color: #0b0e14;
+  --card-bg: #151a26;
+  --accent-color: #00ffcc;
+  --gold-color: #ffd700;
+  --red-color: #ff5c5c;
+  --text-color: #ffffff;
+  --text-muted: #8a99ad;
+}
+* { box-sizing: border-box; }
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+header {
+  background-color: rgba(21, 26, 38, 0.95);
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222d3d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo { font-size: 24px; font-weight: bold; color: var(--accent-color); text-decoration: none; }
+nav a { color: var(--text-color); text-decoration: none; margin-left: 20px; font-weight: 500; }
+nav a:hover { color: var(--accent-color); }
+nav a.nav-cta {
+  background-color: var(--accent-color);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+nav a.nav-cta:hover { background-color: #00cca3; color: #000; }
+
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+.hero { text-align: center; padding: 60px 20px 30px; }
+h1 { font-size: 34px; margin-bottom: 14px; }
+h1 span { color: var(--accent-color); }
+.subtitle { color: var(--text-muted); font-size: 17px; max-width: 650px; margin: 0 auto; }
+
+.section { margin: 50px 0; }
+.section h2 {
+  font-size: 22px;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 14px;
+  margin-bottom: 20px;
+}
+.section p { color: #c7d0dc; margin-bottom: 16px; }
+
+.checks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+.check-card {
+  background-color: var(--card-bg);
+  border: 1px solid #222d3d;
+  border-radius: 8px;
+  padding: 20px;
+}
+.check-card h4 { margin: 0 0 8px; font-size: 15px; color: var(--accent-color); }
+.check-card p { color: var(--text-muted); font-size: 13px; margin: 0; }
+.check-card .source { display: block; margin-top: 10px; font-size: 11px; color: #5c6b80; }
+
+/* Score bands */
+.score-bands { margin-top: 20px; }
+.band {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--card-bg);
+  border: 1px solid #222d3d;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+.band .dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+.band.low .dot { background-color: var(--accent-color); }
+.band.medium .dot { background-color: var(--gold-color); }
+.band.high .dot { background-color: var(--red-color); }
+.band .label { font-weight: bold; min-width: 160px; }
+.band .desc { color: var(--text-muted); font-size: 14px; }
+
+/* Badge states */
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+.state-card {
+  background-color: var(--card-bg);
+  border: 1px solid #222d3d;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+.state-pill {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.state-pill.active { background-color: rgba(0,255,204,0.15); color: var(--accent-color); border: 1px solid var(--accent-color); }
+.state-pill.verified { background-color: rgba(255,215,0,0.15); color: var(--gold-color); border: 1px solid var(--gold-color); }
+.state-pill.expired { background-color: rgba(255,92,92,0.15); color: var(--red-color); border: 1px solid var(--red-color); }
+.state-card p { color: var(--text-muted); font-size: 13px; margin: 0; }
+
+.limits-list { list-style: none; padding: 0; margin-top: 16px; }
+.limits-list li {
+  padding: 12px 0 12px 26px;
+  position: relative;
+  color: #c7d0dc;
+  border-bottom: 1px solid #1c2432;
+  font-size: 14px;
+}
+.limits-list li::before { content: "⚠"; position: absolute; left: 0; color: var(--gold-color); }
+.limits-list li:last-child { border-bottom: none; }
+
+.legal-box {
+  background-color: var(--card-bg);
+  border: 1px solid #222d3d;
+  border-radius: 8px;
+  padding: 28px;
+  margin: 50px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.legal-box strong { color: var(--text-color); }
+
+.cta-box {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(0,255,204,0.08), rgba(21,26,38,0.4));
+  border: 1px solid #222d3d;
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: 50px 0;
+}
+.cta-box h3 { margin-top: 0; font-size: 20px; }
+.cta-box p { color: var(--text-muted); }
+.cta-btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.cta-btn:hover { background-color: #00cca3; }
+
+footer {
+  background-color: #07090d;
+  text-align: center;
+  padding: 30px;
+  margin-top: 60px;
+  border-top: 1px solid #151a26;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+footer a { color: var(--text-muted); text-decoration: none; margin: 0 8px; }
+footer a:hover { color: var(--accent-color); }
+.footer-links { margin-bottom: 14px; }
+.footer-legal { font-size: 12px; max-width: 700px; margin: 14px auto 0; color: #5c6b80; }
+</style>
+</head>
+<body>
+
+<header>
+<a href="index.html" class="logo">Cryptonextx</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="directory.html">Directory</a>
+<a href="blog.html">Articles</a>
+<a href="advertise.html">Advertise With Us</a>
+<a href="advertise.html#pricing" class="nav-cta">Get Verified — £29</a>
+</nav>
+</header>
+
+<div class="hero">
+<h1>How the <span>AI Safety Badge</span> Is Calculated</h1>
+<p class="subtitle">Full transparency on what we check, how we score it, and — just as importantly — what the badge does not mean.</p>
+</div>
+
+<div class="container">
+
+<div class="section">
+<h2>What we actually check</h2>
+<p>Before any project is listed or messaged, and again before a badge is issued, our AI engine and screening tools evaluate the following public, on-chain and off-chain data points:</p>
+<div class="checks-grid">
+<div class="check-card">
+<h4>Liquidity Lock</h4>
+<p>We verify whether liquidity is locked, the percentage locked, and the lock duration. Projects with unlocked or partially locked liquidity are flagged.</p>
+<span class="source">Checked on-chain</span>
+</div>
+<div class="check-card">
+<h4>Contract Safety Scan</h4>
+<p>The smart contract is scanned for common risk patterns — hidden mint functions, ownership renouncement, honeypot mechanics, and transfer restrictions.</p>
+<span class="source">Via GoPlus Security & Honeypot.is</span>
+</div>
+<div class="check-card">
+<h4>Holder Distribution</h4>
+<p>We analyze how concentrated token holdings are. A small number of wallets holding a large share of supply increases the risk score.</p>
+<span class="source">On-chain holder data</span>
+</div>
+<div class="check-card">
+<h4>Community Activity</h4>
+<p>We assess whether engagement on X and Telegram reflects a real, active community rather than bot-driven or purchased activity.</p>
+<span class="source">Public social data</span>
+</div>
+<div class="check-card">
+<h4>Liquidity Depth</h4>
+<p>Total liquidity value is measured against typical trading volume to flag projects vulnerable to price manipulation.</p>
+<span class="source">On-chain / DEX data</span>
+</div>
+<div class="check-card">
+<h4>Project Age &amp; History</h4>
+<p>We note how long the contract has been live and whether ownership, liquidity, or supply have changed unexpectedly since launch.</p>
+<span class="source">On-chain history</span>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>How the risk score works</h2>
+<p>Every reviewed project receives one of three risk bands. <strong>The band reflects what our checks actually find — it is not guaranteed to be positive, and two projects that both pass our initial screening can still receive different scores.</strong></p>
+<div class="score-bands">
+<div class="band low">
+<span class="dot"></span>
+<span class="label">Low Risk</span>
+<span class="desc">Liquidity fully locked, clean contract scan, healthy holder distribution, genuine community activity.</span>
+</div>
+<div class="band medium">
+<span class="dot"></span>
+<span class="label">Medium Risk</span>
+<span class="desc">Passes core checks but shows one or more caution signals — e.g. liquidity near the minimum threshold, or moderate holder concentration.</span>
+</div>
+<div class="band high">
+<span class="dot"></span>
+<span class="label">High Risk</span>
+<span class="desc">Fails one or more core checks. Projects in this band are not issued a badge until the underlying issue is resolved.</span>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Badge status</h2>
+<p>A badge is not permanent by default — its status reflects whether the project has kept its analysis current.</p>
+<div class="state-grid">
+<div class="state-card">
+<span class="state-pill active">Active</span>
+<p>Re-analyzed within the last billing cycle (Growth / Priority plans). Score reflects current on-chain data.</p>
+</div>
+<div class="state-card">
+<span class="state-pill verified">AI-Verified</span>
+<p>Priority-tier badge, backed by extended analysis and monthly re-verification.</p>
+</div>
+<div class="state-card">
+<span class="state-pill expired">Expired</span>
+<p>No re-analysis within 30 days of a one-time Basic listing. The badge displays as unverified until renewed.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>What this badge is <em>not</em></h2>
+<ul class="limits-list">
+<li>It is not a substitute for a professional smart contract audit performed by a licensed security firm.</li>
+<li>It does not guarantee the project's team is trustworthy, that funds won't be mismanaged, or that the token will perform well.</li>
+<li>It cannot detect risks that aren't visible in public on-chain or social data, such as off-chain agreements or future team decisions.</li>
+<li>It is not investment, financial, or legal advice, and should never be the sole basis for an investment decision.</li>
+<li>A "Low Risk" score describes the data available at the time of review — it is not a permanent or forward-looking guarantee.</li>
+</ul>
+</div>
+
+<div class="legal-box">
+<strong>Legal disclaimer:</strong> The AI Safety Badge is an automated, data-driven assessment of publicly available contract, liquidity, and activity data. It is not a formal security audit, not an endorsement, and not a guarantee of token performance or investment safety. Past performance does not guarantee future results. Cryptonextx is not liable for investment decisions made based on badge scores or reports. Investors are strongly encouraged to conduct their own independent research (DYOR) before making any financial decision.
+</div>
+
+<div class="cta-box">
+<h3>Ready to get your project reviewed?</h3>
+<p>Verification typically completes within 24 hours of confirmed payment.</p>
+<a href="advertise.html#pricing" class="cta-btn">View Badge Packages — from £29</a>
+</div>
+
+</div>
+
+<footer>
+<div class="footer-links">
+<a href="index.html">Home</a> ·
+<a href="directory.html">Directory</a> ·
+<a href="methodology.html">Badge Methodology</a> ·
+<a href="advertise.html">Advertise</a> ·
+<a href="mailto:info@cryptonextx.com">Contact</a>
+</div>
+<p>&copy; 2026 Cryptonextx. All Rights Reserved.</p>
+<p class="footer-legal">The AI Safety Badge is an automated, data-driven indicator and does not constitute a professional audit, endorsement, or financial advice. Cryptonextx is not liable for investment decisions made based on badge scores. Always do your own research (DYOR).</p>
+</footer>
+
+</body>
+</html>
