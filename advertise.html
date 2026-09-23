@@ -172,6 +172,31 @@ h1 span { color: var(--accent-color); }
 /* HOW IT WORKS */
 .section-title { text-align: center; font-size: 26px; margin: 60px 0 10px; }
 .section-sub { text-align: center; color: var(--text-muted); margin-bottom: 40px; }
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 700px;
+  margin: 30px auto 50px;
+  padding: 0 20px;
+}
+.compare-col {
+  background-color: var(--card-bg);
+  border: 1px solid #222d3d;
+  border-radius: 10px;
+  padding: 24px;
+}
+.compare-col.highlight { border-color: var(--accent-color); box-shadow: 0 0 20px rgba(0,255,204,0.08); }
+.compare-col h4 { margin: 0 0 14px; font-size: 16px; text-align: center; }
+.compare-col.highlight h4 { color: var(--accent-color); }
+.compare-list { list-style: none; padding: 0; margin: 0; font-size: 13px; color: var(--text-muted); }
+.compare-list li { padding: 8px 0 8px 22px; position: relative; border-bottom: 1px solid #1c2432; }
+.compare-list li:last-child { border-bottom: none; }
+.compare-list li::before { content: "–"; position: absolute; left: 0; color: var(--text-muted); }
+.compare-list.good li { color: #e0e6ed; }
+.compare-list.good li::before { content: "✔"; color: var(--accent-color); }
+@media (max-width: 600px) { .compare-grid { grid-template-columns: 1fr; } }
+
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -262,6 +287,21 @@ footer a:hover { color: var(--accent-color); }
 .footer-links { margin-bottom: 14px; }
 .footer-legal { font-size: 12px; max-width: 700px; margin: 14px auto 0; color: #5c6b80; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Cryptonextx AI Safety Badge",
+  "description": "AI-assisted safety review and verification badge for crypto projects, covering liquidity lock, contract safety, holder distribution, and community activity.",
+  "brand": { "@type": "Brand", "name": "Cryptonextx" },
+  "offers": [
+    { "@type": "Offer", "name": "Basic", "price": "29", "priceCurrency": "GBP", "url": "https://cryptonextx.com/advertise.html#pricing" },
+    { "@type": "Offer", "name": "Growth", "price": "99", "priceCurrency": "GBP", "url": "https://cryptonextx.com/advertise.html#pricing" },
+    { "@type": "Offer", "name": "Priority", "price": "199", "priceCurrency": "GBP", "url": "https://cryptonextx.com/advertise.html#pricing" },
+    { "@type": "Offer", "name": "Sponsored Deep-Dive", "price": "299", "priceCurrency": "GBP", "url": "https://cryptonextx.com/advertise.html#pricing" }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -272,6 +312,7 @@ footer a:hover { color: var(--accent-color); }
 <a href="directory.html">Directory</a>
 <a href="blog.html">Articles</a>
 <a href="advertise.html">Advertise With Us</a>
+<a href="methodology.html">How We Score</a>
 <a href="#pricing" class="nav-cta">Get Verified — £29</a>
 </nav>
 </header>
@@ -288,7 +329,7 @@ AI Safety Badge
 
 <div class="container">
 <div class="legal-note" style="max-width:800px;margin:0 auto 10px;">
-The AI Safety Badge reflects our automated analysis of public contract, liquidity and activity data at the time of review — a project's badge and risk score are based on what our tools actually find, and may indicate elevated risk. It is not a professional security audit, not a guarantee of token performance, and not investment or financial advice. Past performance does not guarantee future results. Investors should always do their own research.
+The AI Safety Badge reflects our AI-assisted analysis of public contract, liquidity and activity data at the time of review — a project's badge and risk score are based on what our tools actually find, and may indicate elevated risk. It is not a professional security audit, not a guarantee of token performance, and not investment or financial advice. Past performance does not guarantee future results. Investors should always do their own research.
 </div>
 </div>
 
@@ -301,7 +342,7 @@ The AI Safety Badge reflects our automated analysis of public contract, liquidit
 <ul class="features">
 <li>Permanent listing in the directory</li>
 <li>Clickable AI Safety Badge + risk score</li>
-<li>Automated Snapshot Report (contract, holders, liquidity)</li>
+<li>AI-Assisted Snapshot Report (contract, holders, liquidity)</li>
 <li>Embeddable badge for your own website</li>
 <li>Shareable referral link</li>
 </ul>
@@ -351,6 +392,29 @@ The AI Safety Badge reflects our automated analysis of public contract, liquidit
 
 </div>
 
+<h2 class="section-title">Free check vs. the £29 badge</h2>
+<p class="section-sub">GoPlus and Honeypot.is are free to use yourself — here's what the badge adds</p>
+<div class="compare-grid">
+<div class="compare-col">
+<h4>Free, on your own</h4>
+<ul class="compare-list">
+<li>A moment-in-time result</li>
+<li>Nothing saved or shareable</li>
+<li>No badge, no embed code</li>
+<li>No directory listing</li>
+</ul>
+</div>
+<div class="compare-col highlight">
+<h4>£29 Badge</h4>
+<ul class="compare-list good">
+<li>Dated, permanent report</li>
+<li>Clickable badge + HTML embed for your site</li>
+<li>Permanent directory listing</li>
+<li>A link that points back to your project</li>
+</ul>
+</div>
+</div>
+
 <h2 class="section-title">How it works</h2>
 <p class="section-sub">From payment to a live badge on your site — in three steps</p>
 <div class="steps-grid">
@@ -361,8 +425,8 @@ The AI Safety Badge reflects our automated analysis of public contract, liquidit
 </div>
 <div class="step">
 <div class="num">2</div>
-<h4>Our AI reviews your project</h4>
-<p>Contract, liquidity, and holder data are analyzed automatically and scored.</p>
+<h4>We review your project</h4>
+<p>Contract safety, liquidity, and holder data are checked against public tools (GoPlus, Honeypot.is, DEX Screener), with AI assisting in compiling the report.</p>
 </div>
 <div class="step">
 <div class="num">3</div>
@@ -383,18 +447,20 @@ The AI Safety Badge reflects our automated analysis of public contract, liquidit
 <p class="payment-note">Prefer card payment? We're rolling out a one-click checkout — email us and we'll notify you as soon as it's live. Verification is typically completed within 24 hours of confirmed payment.</p>
 </div>
 
-</div>
-
 <footer>
 <div class="footer-links">
 <a href="index.html">Home</a> ·
 <a href="directory.html">Directory</a> ·
 <a href="methodology.html">Badge Methodology</a> ·
 <a href="advertise.html">Advertise</a> ·
-<a href="mailto:info@cryptonextx.com">Contact</a>
+<a href="about.html">About</a> ·
+<a href="contact.html">Contact</a> ·
+<a href="faq.html">FAQ</a> ·
+<a href="privacy.html">Privacy</a> ·
+<a href="terms.html">Terms</a>
 </div>
 <p>&copy; 2026 Cryptonextx. All Rights Reserved.</p>
-<p class="footer-legal">The AI Safety Badge is an automated, data-driven indicator and does not constitute a professional audit, endorsement, or financial advice. Cryptonextx is not liable for investment decisions made based on badge scores. Always do your own research (DYOR).</p>
+<p class="footer-legal">The AI Safety Badge is an AI-assisted, data-driven indicator and does not constitute a professional audit, endorsement, or financial advice. Cryptonextx is not liable for investment decisions made based on badge scores. Always do your own research (DYOR).</p>
 </footer>
 
 <script>
